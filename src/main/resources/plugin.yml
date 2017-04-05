@@ -1,0 +1,21 @@
+name: ${name}
+version: ${version}
+description: ${description}
+author: ${author}
+website: ${url}
+
+main: ${mainClass}
+
+commands:
+  vanish:
+    usage: /<command>
+    description: "Hide yourself from other online players!"
+
+permissions:
+  evanesce.*:
+    children:
+      evanesce.vanish: true
+    description: "Gives access to all evanesce commands."
+  evanesce.vanish:
+    default: false
+    description: "Hide yourself from other players!"
