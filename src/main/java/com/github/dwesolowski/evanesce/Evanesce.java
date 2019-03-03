@@ -9,6 +9,7 @@ public class Evanesce extends JavaPlugin {
     @Override
     public void onEnable() {
         registerCommands();
+        registerMetrics();
     }
 
     @Override
@@ -18,5 +19,9 @@ public class Evanesce extends JavaPlugin {
 
     private void registerCommands() {
         getCommand("vanish").setExecutor(new VanishCommand(this));
+    }
+
+    private void registerMetrics() {
+        final MetricsLite metrics = new MetricsLite(this);
     }
 }

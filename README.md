@@ -1,8 +1,10 @@
 # Evanesce - Plugin for Bukkit | Spigot
 
+[![Software License](http://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+
 Hide yourself from other online players!
 
-#### Supported Versions: 1.11+
+#### Supported Versions: 1.13+
 
 ## Commands:  
 - /vanish: Hide yourself from other online players!  
