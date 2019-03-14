@@ -36,14 +36,14 @@ public class VanishCommand implements CommandExecutor {
             if (player.hasPermission("evanesce.vanish")) {
                 if (!this.vanished.contains(player)) {
                     for (Player all : Bukkit.getServer().getOnlinePlayers()) {
-                        all.hidePlayer(player);
+                        all.hidePlayer(plugin, player);
                     }
                     this.vanished.add(player);
                     player.sendMessage(ChatColor.GREEN + "You have vanished from other players!");
                     return true;
                 }
                 for (Player all : Bukkit.getServer().getOnlinePlayers()) {
-                    all.showPlayer(player);
+                    all.showPlayer(plugin, player);
                 }
                 this.vanished.remove(player);
                 player.sendMessage(ChatColor.GREEN + "You are now visible to other players!");
@@ -62,7 +62,7 @@ public class VanishCommand implements CommandExecutor {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
         for (Player player : this.vanished) {
-            event.getPlayer().hidePlayer(player);
+            event.getPlayer().hidePlayer(plugin, player);
         }
     }
 

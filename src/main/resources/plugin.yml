@@ -6,13 +6,11 @@ api-version: 1.13
 commands:
   vanish:
     usage: /<command>
-    description: "Hide yourself from other online players!"
-
+    description: "Show / Hide yourself from other online players!"
+    permission: evanesce.vanish
+# Allowed defaults are: true, false, op, not op
+# If nodes does not exist, permission defaults to op.
 permissions:
-  evanesce.*:
-    children:
-      evanesce.vanish: true
-    description: "Gives access to all evanesce commands."
   evanesce.vanish:
-    default: false
-    description: "Hide yourself from other players!"
+    description: "Gives access to the evanesce command."
+    default: op
